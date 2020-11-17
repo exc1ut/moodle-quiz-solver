@@ -1,0 +1,7 @@
+POST http://localhost:3000/getInfo
+content-type: application/json
+
+[{
+    "question":"123",
+    "answer":"b"
+}]
