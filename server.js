@@ -53,8 +53,9 @@ app.post("/getInfo", async (req, res) => {
       await quizInstance.save();
     } else {
       const answerIndex = dbQuestions[index].answer.findIndex(
-        (x) => x.answer == q.answer
+        (x) => x == q.answer
       );
+      console.log(dbQuestions[index].answer);
       if (answerIndex == -1) {
         const aQuiz = await Quiz.findById(dbQuestions[index].id);
         aQuiz.answer.push(q.answer);
