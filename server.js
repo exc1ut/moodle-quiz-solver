@@ -58,4 +58,6 @@ app.post("/getInfo", async (req, res) => {
   res.json(dbQuestions2);
 });
 
-app.listen(3000, () => console.log("server started"));
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log("server started"));
